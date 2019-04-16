@@ -1,0 +1,22 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.covalence-blue {
+    color: #0091ea;
+}
+
+.nav-bar{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.tag{
+    border: 1px;
+    background-color: green;
+    border-radius: 2px;
+    color: white;
+    font-size: .7em;
+}
