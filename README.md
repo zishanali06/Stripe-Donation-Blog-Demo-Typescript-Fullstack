@@ -1,3 +1,3 @@
 # Full Stack Blog using MySQL and Authetification
-Implementing authetification to react and mysql api endpoints
+Adding Stripe to My Blog, adding on top of version with authentification.
 
