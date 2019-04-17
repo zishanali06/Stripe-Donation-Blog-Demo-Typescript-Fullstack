@@ -14,10 +14,19 @@ class Donateform extends React.Component<DonateformProps, DonateformState> {
         e.preventDefault()
         console.log('test');
         try {
-            let token =  await this.props.stripe.createToken({ name: this.state.name });
+            let { token } = await this.props.stripe.createToken({ name: this.state.name });
+            let amount = this.state.amount;
             console.log(token);
-        } catch (error) {
-            throw error;
+            await fetch('/api/donate', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({ token, amount })
+            });
+            //redirect, clear inputs, thank alert
+        } catch (e) {
+            throw e;
         }
     }
 
